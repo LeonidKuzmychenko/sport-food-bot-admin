@@ -1,0 +1,31 @@
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    /*width: 100vw;*/
+    width: 100%;
+    height: 100vh;
+}
+
+.navigation{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.header {
+    flex-shrink: 0; /* фиксированная высота */
+    background: #eee;
+    /*padding: 16px;*/
+}
+
+.main {
+    flex: 1; /* занимает всё оставшееся место */
+    background: #fafafa;
+    /*padding: 16px;*/
+}
+
+.footer {
+    flex-shrink: 0; /* прижимаем вниз */
+    background: #ddd;
+    /*padding: 16px;*/
+}
