@@ -4,6 +4,7 @@ import type { Column } from "../data/Column.tsx";
 type AdminTableProps<T> = {
     data: T[];
     columns: Column<T>[];
+    onView?: (row: T) => void;
     onEdit?: (row: T) => void;
     onDelete?: (row: T) => void;
 };
@@ -13,6 +14,7 @@ export default function AdminTable<
 >({
       data,
       columns,
+      onView,
       onEdit,
       onDelete,
   }: AdminTableProps<T>) {
@@ -24,7 +26,7 @@ export default function AdminTable<
                     {columns.map((col) => (
                         <th key={String(col.key)}>{col.label}</th>
                     ))}
-                    {(onEdit || onDelete) && <th>Actions</th>}
+                    {(onEdit || onDelete || onView) && <th>Actions</th>}
                 </tr>
                 </thead>
                 <tbody>
@@ -47,8 +49,16 @@ export default function AdminTable<
                                         : String(row[col.key])}
                                 </td>
                             ))}
-                            {(onEdit || onDelete) && (
+                            {(onEdit || onDelete || onView) && (
                                 <td className="actions">
+                                    {onView && (
+                                        <button
+                                            className="btn btn-view"
+                                            onClick={() => onView(row)}
+                                        >
+                                            View
+                                        </button>
+                                    )}
                                     {onEdit && (
                                         <button
                                             className="btn btn-edit"

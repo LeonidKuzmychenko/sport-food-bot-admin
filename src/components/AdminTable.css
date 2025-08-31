@@ -51,11 +51,12 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s;
+
+    color: white;
 }
 
 .btn-edit {
     background-color: #1976d2;
-    color: white;
 }
 
 .btn-edit:hover {
@@ -63,9 +64,18 @@
     box-shadow: 0 2px 6px rgba(25, 118, 210, 0.3);
 }
 
+/* View button */
+.btn-view {
+    background-color: #2e7d32; /* Material green */
+}
+
+.btn-view:hover {
+    background-color: #1b5e20;
+    box-shadow: 0 2px 6px rgba(46, 125, 50, 0.3);
+}
+
 .btn-delete {
     background-color: #e53935;
-    color: white;
 }
 
 .btn-delete:hover {

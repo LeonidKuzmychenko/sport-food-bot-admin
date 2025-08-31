@@ -1,5 +1,6 @@
 import type {Column} from "../../data/Column.tsx";
 import AdminTable from "../AdminTable.tsx";
+import "./Page3.css"
 
 type User = {
     id: number;
@@ -52,10 +53,11 @@ const columns: Column<User>[] = [
 export default function Page3() {
     return (
         <div>
-            <h2>Users</h2>
+            {/*<h2 className={"table-title"}>Users</h2>*/}
             <AdminTable
                 data={users}
                 columns={columns}
+                onView={(user) => alert("View:\n" + JSON.stringify(user, null, 2))}
                 onEdit={(user) => alert("Edit " + user.name)}
                 onDelete={(user) => alert("Delete " + user.name)}
             />
