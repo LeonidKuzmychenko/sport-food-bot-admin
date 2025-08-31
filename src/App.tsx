@@ -1,8 +1,8 @@
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import Layout from "./Layout.tsx";
-import Page1 from "./Page1.tsx";
-import Page2 from "./Page2.tsx";
-import Page3 from "./Page3.tsx";
+import Page1 from "./components/pages/Page1.tsx";
+import Page2 from "./components/pages/Page2.tsx";
+import Page3 from "./components/pages/Page3.tsx";
 
 function App() {
     const router = createBrowserRouter([

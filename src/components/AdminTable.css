@@ -1,0 +1,74 @@
+.admin-table-container {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Material shadow */
+    background: #fff;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table tr {
+    transition: background-color 0.2s;
+}
+
+.admin-table tr:hover {
+    background-color: rgba(25, 118, 210, 0.08); /* Material blue hover */
+}
+
+.admin-table td {
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Кнопки под Material */
+.btn {
+    border: none;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-edit {
+    background-color: #1976d2;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #1565c0;
+    box-shadow: 0 2px 6px rgba(25, 118, 210, 0.3);
+}
+
+.btn-delete {
+    background-color: #e53935;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #c62828;
+    box-shadow: 0 2px 6px rgba(229, 57, 53, 0.3);
+}

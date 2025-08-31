@@ -1,0 +1,36 @@
+.header {
+    flex-shrink: 0;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* тень как в material */
+    padding: 12px 24px;
+    position: sticky; /* прилипает к верху */
+    top: 0;
+    z-index: 100;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: #555;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+    background-color: rgba(25, 118, 210, 0.08); /* голубой hover */
+    color: #1976d2; /* material blue */
+}
+
+.nav-link.active {
+    background-color: rgba(25, 118, 210, 0.15);
+    color: #1976d2;
+    font-weight: 600;
+}

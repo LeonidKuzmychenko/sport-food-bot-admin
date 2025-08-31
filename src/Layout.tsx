@@ -1,22 +1,18 @@
-import { Link, Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 
 import "./Layout.css"
+import Header from "./components/header/Header.tsx";
+
 function Layout() {
     return (
         <div className="mainPage">
-            <header className="header">
-                <nav className={"navigation"}>
-                    <Link to="/">Page1</Link>
-                    <Link to="/page2">Page2</Link>
-                    <Link to="/page3">Page3</Link>
-                </nav>
-            </header>
+            <Header/>
 
             <main className="main">
-                <Outlet /> {/* сюда подставляется текущая страница */}
+                <Outlet/> {/* сюда подставляется текущая страница */}
             </main>
 
-            <footer className="footer">Footer</footer>
+            {/*<footer className="footer">Footer</footer>*/}
         </div>
     );
 }
